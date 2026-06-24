@@ -8,7 +8,7 @@ import (
 	"github.com/Shivam010/protoc-gen-validate/gogoproto"
 	"github.com/Shivam010/protoc-gen-validate/validate"
 	"github.com/golang/protobuf/proto"
-	"github.com/lyft/protoc-gen-star"
+	pgs "github.com/lyft/protoc-gen-star/v2"
 )
 
 type RuleContext struct {

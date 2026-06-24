@@ -6,9 +6,9 @@ package validate
 import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
-	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
-	duration "github.com/golang/protobuf/ptypes/duration"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	descriptor "google.golang.org/protobuf/types/descriptorpb"
+	duration "google.golang.org/protobuf/types/known/durationpb"
+	timestamp "google.golang.org/protobuf/types/known/timestamppb"
 	math "math"
 )
 

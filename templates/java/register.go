@@ -9,11 +9,11 @@ import (
 	"unicode"
 
 	"github.com/Shivam010/protoc-gen-validate/templates/shared"
-	"github.com/golang/protobuf/ptypes/duration"
-	"github.com/golang/protobuf/ptypes/timestamp"
+	"google.golang.org/protobuf/types/known/durationpb"
+	"google.golang.org/protobuf/types/known/timestamppb"
 	"github.com/iancoleman/strcase"
-	pgs "github.com/lyft/protoc-gen-star"
-	pgsgo "github.com/lyft/protoc-gen-star/lang/go"
+	pgs "github.com/lyft/protoc-gen-star/v2"
+	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 )
 
 func RegisterIndex(tpl *template.Template, params pgs.Parameters) {
@@ -440,13 +440,13 @@ func (fns javaFuncs) byteArrayLit(bytes []uint8) string {
 	return sb
 }
 
-func (fns javaFuncs) durLit(dur *duration.Duration) string {
+func (fns javaFuncs) durLit(dur *durationpb.Duration) string {
 	return fmt.Sprintf(
 		"io.envoyproxy.pgv.TimestampValidation.toDuration(%d,%d)",
 		dur.GetSeconds(), dur.GetNanos())
 }
 
-func (fns javaFuncs) tsLit(ts *timestamp.Timestamp) string {
+func (fns javaFuncs) tsLit(ts *timestamppb.Timestamp) string {
 	return fmt.Sprintf(
 		"io.envoyproxy.pgv.TimestampValidation.toTimestamp(%d,%d)",
 		ts.GetSeconds(), ts.GetNanos())

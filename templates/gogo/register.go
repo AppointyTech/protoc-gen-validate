@@ -3,7 +3,7 @@ package gogo
 import (
 	"text/template"
 
-	"github.com/lyft/protoc-gen-star"
+	pgs "github.com/lyft/protoc-gen-star/v2"
 
 	shared "github.com/Shivam010/protoc-gen-validate/templates/goshared"
 )

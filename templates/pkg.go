@@ -8,8 +8,8 @@ import (
 	"github.com/Shivam010/protoc-gen-validate/templates/gogo"
 	"github.com/Shivam010/protoc-gen-validate/templates/java"
 	"github.com/Shivam010/protoc-gen-validate/templates/shared"
-	"github.com/lyft/protoc-gen-star"
-	"github.com/lyft/protoc-gen-star/lang/go"
+	pgs "github.com/lyft/protoc-gen-star/v2"
+	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 )
 
 type RegisterFn func(tpl *template.Template, params pgs.Parameters)

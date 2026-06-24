@@ -8,10 +8,9 @@ import (
 
 	"github.com/Shivam010/protoc-gen-validate/validate"
 	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
-	"github.com/golang/protobuf/ptypes/duration"
-	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/lyft/protoc-gen-star"
+	"google.golang.org/protobuf/types/known/durationpb"
+	"google.golang.org/protobuf/types/known/timestamppb"
+	pgs "github.com/lyft/protoc-gen-star/v2"
 )
 
 type FieldType interface {
@@ -444,22 +443,20 @@ func (m *Module) checkPattern(p *string, in int) {
 	}
 }
 
-func (m *Module) checkDur(d *duration.Duration) *time.Duration {
+func (m *Module) checkDur(d *durationpb.Duration) *time.Duration {
 	if d == nil {
 		return nil
 	}
 
-	dur, err := ptypes.Duration(d)
-	m.CheckErr(err, "could not resolve duration")
+	dur := d.AsDuration()
 	return &dur
 }
 
-func (m *Module) checkTS(ts *timestamp.Timestamp) *int64 {
+func (m *Module) checkTS(ts *timestamppb.Timestamp) *int64 {
 	if ts == nil {
 		return nil
 	}
 
-	t, err := ptypes.Timestamp(ts)
-	m.CheckErr(err, "could not resolve timestamp")
+	t := ts.AsTime()
 	return proto.Int64(t.UnixNano())
 }
