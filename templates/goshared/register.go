@@ -41,6 +41,7 @@ func Register(tpl *template.Template, params pgs.Parameters) {
 		"tsLit":         fns.tsLit,
 		"tsStr":         fns.tsStr,
 		"typ":           fns.Type,
+		"trimStar":      func(s interface{}) string { return strings.TrimPrefix(fmt.Sprint(s), "*") },
 		"unwrap":        fns.unwrap,
 		"externalEnums": fns.externalEnums,
 		"enumPackages":  fns.enumPackages,
