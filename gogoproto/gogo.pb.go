@@ -6,6 +6,7 @@
 Package gogoproto is a generated protocol buffer package.
 
 It is generated from these files:
+
 	gogoproto/gogo.proto
 
 It has these top-level messages:

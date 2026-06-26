@@ -1,8 +1,8 @@
 package module
 
 import (
-	"github.com/Shivam010/protoc-gen-validate/templates"
-	"github.com/Shivam010/protoc-gen-validate/templates/java"
+	"github.com/AppointyTech/protoc-gen-validate/templates"
+	"github.com/AppointyTech/protoc-gen-validate/templates/java"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 )

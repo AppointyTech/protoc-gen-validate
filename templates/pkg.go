@@ -3,11 +3,11 @@ package templates
 import (
 	"text/template"
 
-	"github.com/Shivam010/protoc-gen-validate/templates/cc"
-	"github.com/Shivam010/protoc-gen-validate/templates/go"
-	"github.com/Shivam010/protoc-gen-validate/templates/gogo"
-	"github.com/Shivam010/protoc-gen-validate/templates/java"
-	"github.com/Shivam010/protoc-gen-validate/templates/shared"
+	"github.com/AppointyTech/protoc-gen-validate/templates/cc"
+	"github.com/AppointyTech/protoc-gen-validate/templates/go"
+	"github.com/AppointyTech/protoc-gen-validate/templates/gogo"
+	"github.com/AppointyTech/protoc-gen-validate/templates/java"
+	"github.com/AppointyTech/protoc-gen-validate/templates/shared"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 )

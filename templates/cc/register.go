@@ -7,11 +7,11 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/Shivam010/protoc-gen-validate/templates/shared"
-	"google.golang.org/protobuf/types/known/durationpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
+	"github.com/AppointyTech/protoc-gen-validate/templates/shared"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
+	"google.golang.org/protobuf/types/known/durationpb"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func RegisterModule(tpl *template.Template, params pgs.Parameters) {

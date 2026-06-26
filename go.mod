@@ -1,4 +1,4 @@
-module github.com/Shivam010/protoc-gen-validate
+module github.com/AppointyTech/protoc-gen-validate
 
 go 1.22
 

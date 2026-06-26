@@ -3,7 +3,7 @@ package golang
 import (
 	"text/template"
 
-	"github.com/Shivam010/protoc-gen-validate/templates/goshared"
+	"github.com/AppointyTech/protoc-gen-validate/templates/goshared"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 )
 

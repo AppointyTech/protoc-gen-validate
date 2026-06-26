@@ -12,7 +12,7 @@ import (
 
 	"strings"
 
-	harness "github.com/Shivam010/protoc-gen-validate/tests/harness/go"
+	harness "github.com/AppointyTech/protoc-gen-validate/tests/harness/go"
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/net/context"
 )

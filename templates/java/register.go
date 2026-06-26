@@ -8,12 +8,12 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/Shivam010/protoc-gen-validate/templates/shared"
-	"google.golang.org/protobuf/types/known/durationpb"
-	"google.golang.org/protobuf/types/known/timestamppb"
+	"github.com/AppointyTech/protoc-gen-validate/templates/shared"
 	"github.com/iancoleman/strcase"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
+	"google.golang.org/protobuf/types/known/durationpb"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func RegisterIndex(tpl *template.Template, params pgs.Parameters) {

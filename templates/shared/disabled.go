@@ -1,7 +1,7 @@
 package shared
 
 import (
-	"github.com/Shivam010/protoc-gen-validate/validate"
+	"github.com/AppointyTech/protoc-gen-validate/validate"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 )
 

@@ -10,7 +10,7 @@ The static validations like certain field is a required field, a string must be 
 
 The validate method accepts the slice of field_masks of the fields for which the validations are required to be checked. If no field_mask value is provided the method will work as usually and will validate all fields.
 
-For more validation rules follow: [link](https://github.com/Shivam010/protoc-gen-validate/blob/master/README.md#constraint-rules)
+For more validation rules follow: [link](https://github.com/AppointyTech/protoc-gen-validate/blob/master/README.md#constraint-rules)
 
 PGV is a protoc plugin to generate polyglot message validators. While protocol buffers effectively guarantee the types of structured data, they cannot enforce semantic rules for values. This plugin adds support to protoc-generated code to validate such constraints.
 
@@ -81,7 +81,7 @@ Installing PGV can currently only be done from source:
 
 ```sh
 # fetches this repo into $GOPATH
-go get -d github.com/Shivam010/protoc-gen-validate
+go get -d github.com/AppointyTech/protoc-gen-validate
 
 # installs PGV into $GOPATH/bin
 make build
@@ -107,7 +107,7 @@ Go generation should occur into the same output path as the official plugin. For
 protoc \
   -I . \
   -I ${GOPATH}/src \
-  -I ${GOPATH}/src/github.com/Shivam010/protoc-gen-validate \
+  -I ${GOPATH}/src/github.com/AppointyTech/protoc-gen-validate \
   --go_out=":../generated" \
   --validate_out="lang=go:../generated" \
   example.proto
@@ -125,7 +125,7 @@ command to generate `gogo`-compatible validation code:
 protoc \
   -I . \
   -I ${GOPATH}/src \
-  -I ${GOPATH}/src/github.com/Shivam010/protoc-gen-validate \
+  -I ${GOPATH}/src/github.com/AppointyTech/protoc-gen-validate \
   --gogofast_out=":../generated"\
   --validate_out="lang=gogo:../generated" \ example.proto
 ```
@@ -774,7 +774,7 @@ bazel run //tests/harness/executor:executor
 
 ### Docker
 
-PGV comes with a [Dockerfile](/Dockerfile) for consistent development tooling and CI. The main entrypoint is `make` with `quick` as the default target. This repo should be volumed into `/go/src/github.com/Shivam010/protoc-gen-validate` for the proper behavior.
+PGV comes with a [Dockerfile](/Dockerfile) for consistent development tooling and CI. The main entrypoint is `make` with `quick` as the default target. This repo should be volumed into `/go/src/github.com/AppointyTech/protoc-gen-validate` for the proper behavior.
 
 ```sh
 # build the image
@@ -782,12 +782,12 @@ docker build -t lyft/protoc-gen-validate .
 
 # executes the default make target: quick
 docker run --rm \
-  -v $(PWD):/go/src/github.com/Shivam010/protoc-gen-validate \
+  -v $(PWD):/go/src/github.com/AppointyTech/protoc-gen-validate \
   lyft/protoc-gen-validate
 
 # executes the 'build' & 'generate-testdata' make targets
 docker run --rm \
-  -v $(PWD):/go/src/github.com/Shivam010/protoc-gen-validate \
+  -v $(PWD):/go/src/github.com/AppointyTech/protoc-gen-validate \
   lyft/protoc-gen-validate \
   build generate-testdata
 ```

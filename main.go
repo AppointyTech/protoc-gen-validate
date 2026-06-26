@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Shivam010/protoc-gen-validate/module"
+	"github.com/AppointyTech/protoc-gen-validate/module"
 	pgs "github.com/lyft/protoc-gen-star/v2"
 	pgsgo "github.com/lyft/protoc-gen-star/v2/lang/go"
 )

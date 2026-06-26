@@ -6,11 +6,11 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/Shivam010/protoc-gen-validate/validate"
+	"github.com/AppointyTech/protoc-gen-validate/validate"
 	"github.com/golang/protobuf/proto"
+	pgs "github.com/lyft/protoc-gen-star/v2"
 	"google.golang.org/protobuf/types/known/durationpb"
 	"google.golang.org/protobuf/types/known/timestamppb"
-	pgs "github.com/lyft/protoc-gen-star/v2"
 )
 
 type FieldType interface {
