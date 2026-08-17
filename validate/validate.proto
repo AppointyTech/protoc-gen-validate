@@ -1,5 +1,5 @@
 syntax = "proto2";
-package validate;
+package appointytech.validate;
 
 option go_package = "github.com/AppointyTech/protoc-gen-validate/validate";
 option java_package = "io.envoyproxy.pgv.validate";
